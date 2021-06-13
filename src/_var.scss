@@ -1,0 +1,35 @@
+// -----Colors-----
+
+// Primary
+
+$red: hsl(356, 100%, 66%);
+$lightRed: hsl(355, 100%, 74%);
+$darkBlue: hsl(208, 49%, 24%);
+
+// Text Colors
+
+$whiteText: hsl(0, 0%, 100%);
+$navText: hsl(240, 2%, 79%);
+$bodyCopy: hsl(207, 13%, 34%);
+
+// Background
+
+$blueGrade: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+$blueSolid: hsl(240, 10%, 16%);
+
+// -----Typography-----
+
+$header1: 5.6rem;
+$header2: 3.6rem;
+$header3: 2.8rem;
+$header4: 2.4rem;
+$text: 2rem;
+$anchor: 2.2rem;
+
+// -----Fonts-----
+
+@mixin rubik($weight) {
+  font-family: "Rubik", sans-serif;
+  //weights 300, 400, 500, 600 available
+  font-weight: $weight;
+}

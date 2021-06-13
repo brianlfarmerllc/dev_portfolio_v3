@@ -1,0 +1,56 @@
+//Set default browser box sizing, margin and padding
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+//Set default pixel size to 10 for easier rem usage
+html {
+  font-size: 62.5%;
+}
+body {
+  @include rubik(300);
+}
+
+// Global Typography Styles
+
+h1 {
+  font-size: $header1;
+  color: $whiteText;
+}
+
+h2 {
+  font-size: $header2;
+  color: $whiteText;
+}
+
+h3 {
+  font-size: $header3;
+  color: $darkBlue;
+}
+
+h4,
+h5 {
+  font-size: $header4;
+  color: $whiteText;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: $anchor;
+  color: $navText;
+}
+
+button {
+  font-size: $text;
+  color: $whiteText;
+}
+
+p {
+  color: $bodyCopy;
+}

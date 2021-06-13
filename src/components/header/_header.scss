@@ -1,0 +1,96 @@
+header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  background: black;
+}
+.show {
+  animation: floatdown 1.5s ease-in-out 2.1s forwards,
+    fadein 1.5s ease 2.3s forwards;
+}
+nav {
+  width: 90%;
+  min-height: 15vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* div for logo */
+.diamond {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid black 5px;
+  width: 75px;
+  height: 75px;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+.diamond:hover {
+  border-color: $lightRed;
+  transform: rotate(90deg);
+}
+
+.diamond h1 {
+  transform: rotate(-45deg);
+  font-size: 2.4rem;
+  max-width: min-content;
+  padding-left: 0.5rem;
+  transition: all 0.4s;
+}
+
+.diamond:hover > h1 {
+  transform: rotate(-90deg);
+}
+
+ul {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  padding: 0rem 0.75rem;
+  letter-spacing: 0.5rem;
+  transition: color 0.4s;
+  position: relative;
+}
+
+a:hover {
+  /* animation: color 0.8s forwards; */
+  color: $whiteText;
+}
+
+ul a::after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  width: 0%;
+  height: 5px;
+  background: $lightRed;
+  transform: translateX(-50%);
+  top: 130%;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+nav a:hover:after {
+  width: 60%;
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatdown {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

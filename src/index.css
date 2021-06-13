@@ -1,13 +1,205 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
 }
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 5.6rem;
+  color: white;
+}
+
+h2 {
+  font-size: 3.6rem;
+  color: white;
+}
+
+h3 {
+  font-size: 2.8rem;
+  color: #1f3f5b;
+}
+
+h4,
+h5 {
+  font-size: 2.4rem;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: #c8c8cb;
+}
+
+button {
+  font-size: 2rem;
+  color: white;
+}
+
+p {
+  color: #4b5862;
+}
+
+header {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  background: black;
+}
+
+.show {
+  -webkit-animation: floatdown 1.5s ease-in-out 2.1s forwards, fadein 1.5s ease 2.3s forwards;
+          animation: floatdown 1.5s ease-in-out 2.1s forwards, fadein 1.5s ease 2.3s forwards;
+}
+
+nav {
+  width: 90%;
+  min-height: 15vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* div for logo */
+.diamond {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid black 5px;
+  width: 75px;
+  height: 75px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 5px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.diamond:hover {
+  border-color: #ff7a85;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.diamond h1 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  font-size: 2.4rem;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  padding-left: 0.5rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.diamond:hover > h1 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  padding: 0rem 0.75rem;
+  letter-spacing: 0.5rem;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+  position: relative;
+}
+
+a:hover {
+  /* animation: color 0.8s forwards; */
+  color: white;
+}
+
+ul a::after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  width: 0%;
+  height: 5px;
+  background: #ff7a85;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 130%;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav a:hover:after {
+  width: 60%;
+}
+
+@-webkit-keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes floatdown {
+  from {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes floatdown {
+  from {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+/*# sourceMappingURL=index.css.map */
