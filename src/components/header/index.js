@@ -1,10 +1,7 @@
-import React, { useState } from "react";
-
-function Header() {
-  const [header, setHeader] = useState("show");
+function Header({ header }) {
   return (
-    <header className={header}>
-      <nav className="nav">
+    <header>
+      <nav className={header}>
         <a href="#home">
           <div className="diamond">
             <h1>BLF</h1>

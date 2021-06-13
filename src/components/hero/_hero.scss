@@ -1,0 +1,71 @@
+.hero {
+  min-height: 100vh;
+  background: $blueSolid;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+.text-container {
+  min-height: 85vh;
+  @include flex(row, center, flex-start);
+  padding-top: 8rem;
+}
+/* span around typing text */
+span {
+  @include rubik(300);
+  font-size: $header4;
+}
+.const {
+  color: rgb(0, 0, 199);
+  padding-right: 0.5rem;
+}
+.constName {
+  color: rgb(0, 119, 255);
+}
+
+.equals {
+  color: white;
+}
+.array {
+  color: yellow;
+  padding: 0rem 1rem;
+}
+
+h4 {
+  @include rubik(300);
+  color: rgb(255, 115, 0);
+  padding-bottom: 8rem;
+  display: inline;
+  font-size: 2.1rem;
+  position: relative;
+}
+
+h4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background: white;
+  width: 2px;
+  height: 2.6rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  animation: blink 750ms infinite;
+}
+
+.fadeout {
+  animation: fadeout 1.2s ease 1.8s forwards;
+}
+
+.gone {
+  display: none;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}

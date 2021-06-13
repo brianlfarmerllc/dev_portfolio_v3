@@ -56,19 +56,7 @@ p {
 
 header {
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  opacity: 0;
-  background: black;
-}
-
-.show {
-  -webkit-animation: floatdown 1.5s ease-in-out 2.1s forwards, fadein 1.5s ease 2.3s forwards;
-          animation: floatdown 1.5s ease-in-out 2.1s forwards, fadein 1.5s ease 2.3s forwards;
+  background: #25252d;
 }
 
 nav {
@@ -78,12 +66,22 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
+}
+
+.show {
+  -webkit-animation: floatdown 1.5s ease-in-out 2.5s forwards, fadein 1.5s ease 2.8s forwards;
+          animation: floatdown 1.5s ease-in-out 2.5s forwards, fadein 1.5s ease 2.8s forwards;
 }
 
 /* div for logo */
@@ -91,13 +89,17 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: solid black 5px;
+  border: solid #25252d 5px;
   width: 75px;
   height: 75px;
   -webkit-transform: rotate(45deg);
@@ -121,8 +123,10 @@ nav {
   max-width: -moz-min-content;
   max-width: min-content;
   padding-left: 0.5rem;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .diamond:hover > h1 {
@@ -137,8 +141,7 @@ ul {
 }
 
 a {
-  text-decoration: none;
-  padding: 0rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   letter-spacing: 0.5rem;
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
@@ -146,7 +149,6 @@ a {
 }
 
 a:hover {
-  /* animation: color 0.8s forwards; */
   color: white;
 }
 
@@ -159,7 +161,7 @@ ul a::after {
   background: #ff7a85;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 130%;
+  top: 110%;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -200,6 +202,112 @@ nav a:hover:after {
   to {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+  }
+}
+
+.hero {
+  min-height: 100vh;
+  background: #25252d;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+.text-container {
+  min-height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 8rem;
+}
+
+/* span around typing text */
+span {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+.const {
+  color: #0000c7;
+  padding-right: 0.5rem;
+}
+
+.constName {
+  color: #0077ff;
+}
+
+.equals {
+  color: white;
+}
+
+.array {
+  color: yellow;
+  padding: 0rem 1rem;
+}
+
+h4 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: #ff7300;
+  padding-bottom: 8rem;
+  display: inline;
+  font-size: 2.1rem;
+  position: relative;
+}
+
+h4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background: white;
+  width: 2px;
+  height: 2.6rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  -webkit-animation: blink 750ms infinite;
+          animation: blink 750ms infinite;
+}
+
+.fadeout {
+  -webkit-animation: fadeout 1.2s ease 1.8s forwards;
+          animation: fadeout 1.2s ease 1.8s forwards;
+}
+
+.gone {
+  display: none;
+}
+
+@-webkit-keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

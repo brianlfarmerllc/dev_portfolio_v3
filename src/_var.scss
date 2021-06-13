@@ -33,3 +33,12 @@ $anchor: 2.2rem;
   //weights 300, 400, 500, 600 available
   font-weight: $weight;
 }
+
+// -----Helpers-----
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
