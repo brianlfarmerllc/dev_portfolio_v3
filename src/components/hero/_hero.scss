@@ -3,12 +3,63 @@
   background: $blueSolid;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 }
-.text-container {
+.hero-container {
   min-height: 85vh;
   @include flex(row, center, flex-start);
-  padding-top: 8rem;
+  padding-top: 6rem;
 }
-/* span around typing text */
+.hero-content {
+  min-height: 85vh;
+  width: 90%;
+  @include flex(row, space-between, start);
+  opacity: 0;
+}
+.hero-show {
+  animation: floatup 1.5s ease-in-out forwards, fadein 1.5s ease 0.3s forwards;
+}
+.hero-text {
+  text-align: start;
+  h3 {
+    color: $navText;
+    padding-bottom: 2.8rem;
+    font-weight: 300;
+    position: relative;
+    &::after {
+      position: absolute;
+      left: 0%;
+      content: "";
+      width: 0%;
+      height: 5px;
+      background: $lightRed;
+      top: 65%;
+      border-radius: 5px;
+      width: 10%;
+    }
+  }
+  h1 {
+    padding-bottom: 0.8rem;
+  }
+  p {
+    color: $navText;
+    padding-top: 1.2rem;
+    padding-bottom: 7rem;
+    max-width: 650px;
+  }
+  a {
+    margin-top: 4rem;
+    padding: 2rem 3rem;
+    border: solid $lightRed 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    transition: all 0.4s;
+    &:hover {
+      background: $lightRed;
+    }
+  }
+}
+
+/* styles for the typing text */
 span {
   @include rubik(300);
   font-size: $header4;
@@ -29,7 +80,7 @@ span {
   padding: 0rem 1rem;
 }
 
-h4 {
+.typewriter {
   @include rubik(300);
   color: rgb(255, 115, 0);
   padding-bottom: 8rem;
@@ -37,7 +88,7 @@ h4 {
   font-size: 2.1rem;
   position: relative;
 }
-
+// curser for text
 h4::after {
   content: "";
   position: absolute;
@@ -49,23 +100,11 @@ h4::after {
   margin-right: 0.25rem;
   animation: blink 750ms infinite;
 }
-
+// helper classes to fade and remove element
 .fadeout {
   animation: fadeout 1.2s ease 1.8s forwards;
 }
 
 .gone {
   display: none;
-}
-
-@keyframes blink {
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeout {
-  to {
-    opacity: 0;
-  }
 }

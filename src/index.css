@@ -1,3 +1,83 @@
+@-webkit-keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes floatdown {
+  from {
+    -webkit-transform: translateY(-8%);
+            transform: translateY(-8%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes floatdown {
+  from {
+    -webkit-transform: translateY(-8%);
+            transform: translateY(-8%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes floatup {
+  from {
+    -webkit-transform: translateY(2%);
+            transform: translateY(2%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes floatup {
+  from {
+    -webkit-transform: translateY(2%);
+            transform: translateY(2%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -16,23 +96,25 @@ body {
 
 h1 {
   font-size: 5.6rem;
-  color: white;
+  color: #f7f7f7;
+  font-weight: 500;
 }
 
 h2 {
   font-size: 3.6rem;
-  color: white;
+  color: #f7f7f7;
 }
 
 h3 {
   font-size: 2.8rem;
   color: #1f3f5b;
+  letter-spacing: 0.25rem;
 }
 
 h4,
 h5 {
   font-size: 2.4rem;
-  color: white;
+  color: #f7f7f7;
 }
 
 ul {
@@ -42,21 +124,24 @@ ul {
 a {
   text-decoration: none;
   font-size: 2.2rem;
-  color: #c8c8cb;
+  color: #d9d9d9;
 }
 
 button {
-  font-size: 2rem;
-  color: white;
+  font-size: 1.8rem;
+  color: #f7f7f7;
 }
 
 p {
+  line-height: 3rem;
+  letter-spacing: 0.25rem;
+  font-size: 1.8rem;
   color: #4b5862;
 }
 
 header {
   width: 100%;
-  background: #25252d;
+  background: #1c1c22;
 }
 
 nav {
@@ -79,6 +164,10 @@ nav {
   opacity: 0;
 }
 
+nav .logo {
+  padding: 0rem;
+}
+
 .show {
   -webkit-animation: floatdown 1.5s ease-in-out 2.5s forwards, fadein 1.5s ease 2.8s forwards;
           animation: floatdown 1.5s ease-in-out 2.5s forwards, fadein 1.5s ease 2.8s forwards;
@@ -99,7 +188,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: solid #25252d 5px;
+  border: solid #1c1c22 5px;
   width: 75px;
   height: 75px;
   -webkit-transform: rotate(45deg);
@@ -141,7 +230,7 @@ ul {
 }
 
 a {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1.5rem;
   letter-spacing: 0.5rem;
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
@@ -149,7 +238,7 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: #f7f7f7;
 }
 
 ul a::after {
@@ -171,48 +260,14 @@ nav a:hover:after {
   width: 60%;
 }
 
-@-webkit-keyframes fadein {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes floatdown {
-  from {
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
-  }
-  to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-
-@keyframes floatdown {
-  from {
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
-  }
-  to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-
 .hero {
   min-height: 100vh;
-  background: #25252d;
+  background: #1c1c22;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 }
 
-.text-container {
+.hero-container {
   min-height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,10 +282,83 @@ nav a:hover:after {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: 8rem;
+  padding-top: 6rem;
 }
 
-/* span around typing text */
+.hero-content {
+  min-height: 85vh;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  opacity: 0;
+}
+
+.hero-show {
+  -webkit-animation: floatup 1.5s ease-in-out forwards, fadein 1.5s ease 0.3s forwards;
+          animation: floatup 1.5s ease-in-out forwards, fadein 1.5s ease 0.3s forwards;
+}
+
+.hero-text {
+  text-align: start;
+}
+
+.hero-text h3 {
+  color: #d9d9d9;
+  padding-bottom: 2.8rem;
+  font-weight: 300;
+  position: relative;
+}
+
+.hero-text h3::after {
+  position: absolute;
+  left: 0%;
+  content: "";
+  width: 0%;
+  height: 5px;
+  background: #ff7a85;
+  top: 65%;
+  border-radius: 5px;
+  width: 10%;
+}
+
+.hero-text h1 {
+  padding-bottom: 0.8rem;
+}
+
+.hero-text p {
+  color: #d9d9d9;
+  padding-top: 1.2rem;
+  padding-bottom: 7rem;
+  max-width: 650px;
+}
+
+.hero-text a {
+  margin-top: 4rem;
+  padding: 2rem 3rem;
+  border: solid #ff7a85 5px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.hero-text a:hover {
+  background: #ff7a85;
+}
+
+/* styles for the typing text */
 span {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
@@ -255,7 +383,7 @@ span {
   padding: 0rem 1rem;
 }
 
-h4 {
+.typewriter {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
   color: #ff7300;
@@ -285,29 +413,5 @@ h4::after {
 
 .gone {
   display: none;
-}
-
-@-webkit-keyframes blink {
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes blink {
-  to {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fadeout {
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeout {
-  to {
-    opacity: 0;
-  }
 }
 /*# sourceMappingURL=index.css.map */

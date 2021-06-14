@@ -8,6 +8,9 @@ nav {
   margin: auto;
   @include flex(row, space-between, center);
   opacity: 0;
+  .logo {
+    padding: 0rem;
+  }
 }
 .show {
   animation: floatdown 1.5s ease-in-out 2.5s forwards,
@@ -45,7 +48,7 @@ ul {
 }
 
 a {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1.5rem;
   letter-spacing: 0.5rem;
   transition: color 0.4s;
   position: relative;
@@ -70,19 +73,4 @@ ul a::after {
 
 nav a:hover:after {
   width: 60%;
-}
-
-@keyframes fadein {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes floatdown {
-  from {
-    transform: translateY(-10%);
-  }
-  to {
-    transform: translateY(0%);
-  }
 }

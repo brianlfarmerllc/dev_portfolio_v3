@@ -8,14 +8,14 @@ $darkBlue: hsl(208, 49%, 24%);
 
 // Text Colors
 
-$whiteText: hsl(0, 0%, 100%);
-$navText: hsl(240, 2%, 79%);
+$whiteText: hsl(0, 0%, 97%);
+$navText: hsl(0, 0%, 85%);
 $bodyCopy: hsl(207, 13%, 34%);
 
 // Background
 
 $blueGrade: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
-$blueSolid: hsl(240, 10%, 16%);
+$blueSolid: hsl(240, 10%, 12%);
 
 // -----Typography-----
 
@@ -23,7 +23,7 @@ $header1: 5.6rem;
 $header2: 3.6rem;
 $header3: 2.8rem;
 $header4: 2.4rem;
-$text: 2rem;
+$text: 1.8rem;
 $anchor: 2.2rem;
 
 // -----Fonts-----
@@ -41,4 +41,41 @@ $anchor: 2.2rem;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+// ------Key Frames------
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatdown {
+  from {
+    transform: translateY(-8%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes floatup {
+  from {
+    transform: translateY(2%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
