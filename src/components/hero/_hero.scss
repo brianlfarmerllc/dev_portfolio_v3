@@ -1,17 +1,15 @@
 .hero {
-  min-height: 100vh;
+  min-height: 700px;
   background: $blueSolid;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 }
 .hero-container {
-  min-height: 85vh;
   @include flex(row, center, flex-start);
   padding-top: 6rem;
 }
 .hero-content {
-  min-height: 85vh;
   width: 90%;
-  @include flex(row, space-between, start);
+  @include flex(row, space-between, flex-start);
   opacity: 0;
 }
 .hero-show {

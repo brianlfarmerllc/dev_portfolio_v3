@@ -1,10 +1,10 @@
-header {
+.navHeader {
   width: 100%;
   background: $blueSolid;
 }
 nav {
   width: 90%;
-  min-height: 15vh;
+  min-height: 135px;
   margin: auto;
   @include flex(row, space-between, center);
   opacity: 0;

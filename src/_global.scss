@@ -23,7 +23,7 @@ h1 {
 
 h2 {
   font-size: $header2;
-  color: $whiteText;
+  color: $blueSolid;
 }
 
 h3 {
@@ -40,6 +40,11 @@ h5 {
 
 ul {
   list-style: none;
+}
+
+li {
+  font-size: 1.6rem;
+  color: $bodyCopy;
 }
 
 a {

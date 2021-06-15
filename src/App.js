@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/header";
 import Hero from "./components/hero";
+import About from "./components/about";
 
 function App() {
   const [header, setHeader] = useState("hide");
@@ -31,6 +32,7 @@ function App() {
     <main>
       <Header header={header} />
       <Hero navBar={navBar} text={text} hero={hero} />
+      <About />
     </main>
   );
 }

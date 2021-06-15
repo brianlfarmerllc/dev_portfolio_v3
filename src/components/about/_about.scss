@@ -1,0 +1,70 @@
+.about {
+  min-height: 835px;
+  display: grid;
+  place-items: center;
+}
+
+.about-header {
+  padding-bottom: 2rem;
+  h2 {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      margin-left: 2rem;
+      transform: translateY(-50%);
+      background: $blueSolid;
+      height: 2.5px;
+      border-radius: 2.5px;
+      width: 30%;
+    }
+  }
+}
+.about-container {
+  width: 90%;
+  margin: auto;
+}
+
+.about-content {
+  @include flex(row, space-between, flex-start);
+}
+.about-text {
+  flex: 2 1 40rem;
+  p {
+    padding: 0rem 3rem 2rem 0rem;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 200px));
+    padding: 0px;
+    li {
+      position: relative;
+      padding: 0rem 0rem 1rem 3rem;
+      &::before {
+        position: absolute;
+        content: "\274F";
+        top: 50%;
+        left: 0;
+        padding-bottom: 1rem;
+        transform: translateY(-50%);
+        color: $lightRed;
+        margin-right: 3rem;
+      }
+    }
+  }
+}
+
+.about-img {
+  flex: 1 1 40rem;
+  @include flex(row, center, flex-start);
+  img {
+    width: 80%;
+    box-shadow: 30px 30px $lightRed;
+    transition: box-shadow 0.5s;
+    position: relative;
+    &:hover {
+      box-shadow: 10px 10px $lightRed;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 function Header({ header }) {
   return (
-    <header>
+    <header className="navHeader">
       <nav className={header}>
         <a href="#home" className="logo">
           <div className="diamond">
