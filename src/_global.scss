@@ -8,6 +8,7 @@
 //Set default pixel size to 10 for easier rem usage
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   @include rubik(300);
@@ -24,6 +25,7 @@ h1 {
 h2 {
   font-size: $header2;
   color: $blueSolid;
+  padding-bottom: 2rem;
 }
 
 h3 {
@@ -45,6 +47,7 @@ ul {
 li {
   font-size: 1.6rem;
   color: $bodyCopy;
+  letter-spacing: 0.25rem;
 }
 
 a {

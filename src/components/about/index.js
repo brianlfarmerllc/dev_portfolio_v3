@@ -29,6 +29,7 @@ function About() {
               <li>React.js</li>
               <li>Node.js</li>
               <li>MongoDB</li>
+              <li>Figma</li>
             </ul>
           </div>
           <div className="about-img">

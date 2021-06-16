@@ -1,6 +1,6 @@
 function Hero({ navBar, text, hero }) {
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="hero-container">
         <div className={hero}>
           <div className="hero-text">

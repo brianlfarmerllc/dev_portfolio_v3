@@ -2,7 +2,7 @@ function Header({ header }) {
   return (
     <header className="navHeader">
       <nav className={header}>
-        <a href="#home" className="logo">
+        <a href="#hero" className="logo">
           <div className="diamond">
             <h1>BLF</h1>
           </div>

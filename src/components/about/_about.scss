@@ -1,5 +1,5 @@
 .about {
-  min-height: 835px;
+  min-height: 100vh;
   display: grid;
   place-items: center;
 }
@@ -17,7 +17,7 @@
       background: $blueSolid;
       height: 2.5px;
       border-radius: 2.5px;
-      width: 30%;
+      width: 300px;
     }
   }
 }
@@ -32,11 +32,11 @@
 .about-text {
   flex: 2 1 40rem;
   p {
-    padding: 0rem 3rem 2rem 0rem;
+    padding: 0rem 4rem 2rem 0rem;
   }
   ul {
     display: grid;
-    grid-template-columns: repeat(2, minmax(180px, 200px));
+    grid-template-columns: repeat(2, minmax(225px, 300px));
     padding: 0px;
     li {
       position: relative;
