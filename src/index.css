@@ -423,9 +423,7 @@ h4::after {
 
 .about {
   min-height: 100vh;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  padding-top: 5rem;
 }
 
 .about-header {
@@ -542,6 +540,7 @@ h4::after {
 
 .work {
   min-height: 100vh;
+  padding-top: 5rem;
 }
 
 .work-header {
@@ -594,8 +593,9 @@ h4::after {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   color: #1c1c22;
-  background: #f0efef;
+  background: #fafafa;
   padding: 3rem;
+  border-radius: 10px;
 }
 
 .featured ul li {

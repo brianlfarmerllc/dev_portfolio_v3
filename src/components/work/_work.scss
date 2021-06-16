@@ -1,5 +1,6 @@
 .work {
   min-height: 100vh;
+  padding-top: 5rem;
 }
 
 .work-header {
@@ -32,8 +33,9 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   color: $blueSolid;
-  background: #f0efef;
+  background: #fafafa;
   padding: 3rem;
+  border-radius: 10px;
   ul {
     li {
       color: $blueSolid;
