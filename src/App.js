@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import About from "./components/about";
 import Work from "./components/work";
+import Projects from "./components/projects";
 
 function App() {
   const [header, setHeader] = useState("hide");
@@ -35,6 +36,7 @@ function App() {
       <Hero navBar={navBar} text={text} hero={hero} />
       <About />
       <Work />
+      <Projects />
     </main>
   );
 }
