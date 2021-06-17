@@ -26,7 +26,7 @@ const Apis = {
           previews: ["mercy"],
         },
       });
-      console.log(res.data.names);
+      return res.data.names;
     } catch (err) {
       console.log(err);
     }

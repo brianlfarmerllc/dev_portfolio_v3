@@ -1,0 +1,42 @@
+.card {
+  height: 400px;
+  width: 400px;
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 2rem;
+  position: relative;
+}
+
+.card-links {
+  @include flex(row, flex-start, center);
+  li {
+    width: 15%;
+    padding-right: 1rem;
+    @include flex(row, flex-start, center);
+    a {
+      padding: 0rem;
+      svg {
+        width: 80%;
+        &:hover {
+          stroke: $red;
+        }
+      }
+    }
+  }
+}
+
+.card-header {
+  padding: 3rem 0rem 2rem;
+}
+
+.card-topics {
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  li {
+    padding: 0 1rem 0 1rem;
+  }
+}

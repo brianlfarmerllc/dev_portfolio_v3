@@ -3,7 +3,11 @@
   padding: 10rem 0rem;
   background: $blueSolid;
 }
-
+.work-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+}
 .work-header {
   @include flex(row, flex-start, center);
   padding-bottom: 6rem;
@@ -22,11 +26,6 @@
       width: 75px;
     }
   }
-}
-.work-container {
-  width: 90%;
-  max-width: 1440px;
-  margin: auto;
 }
 .featured {
   position: relative;

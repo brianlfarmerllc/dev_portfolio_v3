@@ -1,0 +1,33 @@
+.projects {
+  min-height: 100vh;
+  padding-bottom: 10rem;
+  background: $blueSolid;
+}
+.projects-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+}
+.projects-header {
+  @include flex(row, flex-start, center);
+  padding-bottom: 6rem;
+  h2 {
+    color: $whiteText;
+    position: relative;
+    &::after {
+      position: absolute;
+      left: 0%;
+      content: "";
+      width: 0%;
+      height: 5px;
+      background: $lightRed;
+      top: 110%;
+      border-radius: 5px;
+      width: 75px;
+    }
+  }
+}
+.projects-content {
+  @include flex(row, space-between, flex-start);
+  flex-wrap: wrap;
+}
