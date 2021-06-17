@@ -1,4 +1,11 @@
-export default {
+import { Octokit } from "@octokit/core";
+require("dotenv").config();
+
+const octokit = new Octokit({
+  auth: process.env.GIT_TOKEN,
+});
+
+const Apis = {
   async getProjects() {
     try {
       let res = await fetch(
@@ -10,4 +17,20 @@ export default {
       console.log(err);
     }
   },
+  async getTopics(ownerData, repoData) {
+    try {
+      let res = await octokit.request("GET /repos/{owner}/{repo}/topics", {
+        owner: ownerData,
+        repo: repoData,
+        mediaType: {
+          previews: ["mercy"],
+        },
+      });
+      console.log(res.data.names);
+    } catch (err) {
+      console.log(err);
+    }
+  },
 };
+
+export default Apis;

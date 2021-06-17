@@ -6,7 +6,9 @@ function Projects() {
 
   useEffect(() => {
     loadProjects();
+    api.getTopics("brianlfarmerllc", "BFFK-9_Session_Tracker");
   }, []);
+
   const loadProjects = () => {
     api.getProjects().then((res) => {
       const starProjects = res.filter(
