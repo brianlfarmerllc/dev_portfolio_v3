@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import api from "../api";
 
 function ProjectCard({ info }) {
+  // replace dashes and underscores with spaces in project names
+  const projectName = info.name.replace(/[_-]/g, " ");
+
   const [tech, setTech] = useState([]);
+
   useEffect(() => {
     api.getTopics(info.owner.login, info.name).then((res) => {
       setTech(res);
@@ -38,7 +42,7 @@ function ProjectCard({ info }) {
                 role="img"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#1c1c22"
+                stroke="#1c1c2f"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -53,8 +57,8 @@ function ProjectCard({ info }) {
           </li>
         ) : null}
       </ul>
-      <h3 className="card-header">{info.name}</h3>
-      <p>{info.description}</p>
+      <h3 className="card-header">{projectName}</h3>
+      <p className="card-description">{info.description}</p>
       {tech ? (
         <ul className="card-topics">
           {tech.map((item, index) => (

@@ -87,7 +87,7 @@
 
 html {
   font-size: 62.5%;
-  scroll-padding-top: 15vh;
+  scroll-padding-top: 10vh;
   scroll-behavior: smooth;
 }
 
@@ -159,7 +159,8 @@ p {
 nav {
   width: 90%;
   max-width: 1440px;
-  min-height: 15.1vh;
+  height: 10.1vh;
+  min-height: 105px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,7 +275,7 @@ nav a:hover:after {
 }
 
 .hero {
-  height: 85vh;
+  height: 90vh;
   background: #202041;
 }
 
@@ -621,13 +622,14 @@ h4::after {
   color: #202041;
 }
 
-.content-header p,
 .content-header h3 {
   color: #202041;
+  padding-top: 1rem;
 }
 
-.content-header h3 {
-  padding-top: 1rem;
+.content-header p {
+  color: #ff525d;
+  font-weight: 500;
 }
 
 .featured-content {
@@ -644,7 +646,7 @@ h4::after {
   padding: 3rem;
   background: #202041;
   margin: 2rem 0rem;
-  text-align: center;
+  text-align: start;
 }
 
 .featured-content .project-description p {
@@ -653,6 +655,7 @@ h4::after {
 
 .featured-content .project-tech {
   padding-bottom: 2rem;
+  text-transform: capitalize;
 }
 
 .featured-content .project-tech li {
@@ -841,26 +844,15 @@ h4::after {
 }
 
 .projects-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
 }
 
 .card {
   height: 400px;
-  width: 400px;
   background: #fafafa;
   border-radius: 5px;
   padding: 2rem;
@@ -915,21 +907,22 @@ h4::after {
 
 .card-header {
   padding: 3rem 0rem 2rem;
+  text-transform: capitalize;
+  color: #202041;
 }
 
 .card-topics {
-  text-transform: uppercase;
+  text-transform: capitalize;
   position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  bottom: 5rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 
 .card-topics li {
-  padding: 0 1rem 0 1rem;
+  padding-right: 1rem;
+  color: #ff525d;
+  font-weight: 500;
 }
 /*# sourceMappingURL=index.css.map */

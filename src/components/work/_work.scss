@@ -45,12 +45,13 @@
   }
 }
 .content-header {
-  p,
   h3 {
     color: $blueSolid;
-  }
-  h3 {
     padding-top: 1rem;
+  }
+  p {
+    color: $red;
+    font-weight: 500;
   }
 }
 
@@ -63,13 +64,14 @@
     padding: 3rem;
     background: $blueSolid;
     margin: 2rem 0rem;
-    text-align: center;
+    text-align: start;
     p {
       color: $navText;
     }
   }
   .project-tech {
     padding-bottom: 2rem;
+    text-transform: capitalize;
     li {
       color: $red;
       font-weight: 500;

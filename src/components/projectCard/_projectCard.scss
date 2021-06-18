@@ -1,6 +1,5 @@
 .card {
   height: 400px;
-  width: 400px;
   background: #fafafa;
   border-radius: 5px;
   padding: 2rem;
@@ -27,16 +26,18 @@
 
 .card-header {
   padding: 3rem 0rem 2rem;
+  text-transform: capitalize;
+  color: $blueSolid;
 }
 
 .card-topics {
-  text-transform: uppercase;
+  text-transform: capitalize;
   position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 5rem;
   width: max-content;
   li {
-    padding: 0 1rem 0 1rem;
+    padding-right: 1rem;
+    color: $red;
+    font-weight: 500;
   }
 }
