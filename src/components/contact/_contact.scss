@@ -1,0 +1,95 @@
+.contact {
+  min-height: 100vh;
+  padding: 10rem 0rem;
+}
+
+.contact-header {
+  @include flex(row, flex-start, center);
+  padding-bottom: 6rem;
+  h2 {
+    position: relative;
+    &::after {
+      position: absolute;
+      left: 0%;
+      content: "";
+      width: 0%;
+      height: 5px;
+      background: $lightRed;
+      top: 110%;
+      border-radius: 5px;
+      width: 75px;
+    }
+  }
+}
+.contact-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.contact-content {
+  @include flex(row, space-between, flex-start);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+  padding: 5rem 0rem;
+  flex-wrap: wrap;
+}
+
+.form-container {
+  flex: 1 1 50rem;
+  display: grid;
+  place-items: center;
+  h3 {
+    width: 85%;
+    text-align: center;
+  }
+  form {
+    @include flex(column, center, center);
+    input,
+    textarea {
+      width: 100%;
+      padding: 2rem;
+      margin: 2rem 0rem;
+      background: $navText;
+      border: none;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px,
+        rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px,
+        rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    }
+    button {
+      background: $lightRed;
+      padding: 2rem 3rem;
+      border: solid $lightRed 5px;
+      border-radius: 5px;
+      color: white;
+      font-weight: 400;
+      transition: all 0.4s;
+      width: 100%;
+      cursor: pointer;
+      letter-spacing: 0.5rem;
+      font-size: 2.2rem;
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px,
+        rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px,
+        rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+      &:hover {
+        background: $blueSolid;
+      }
+    }
+  }
+}
+.contact-img {
+  @include flex(column, space-between, center);
+  flex: 2 1 40rem;
+  margin: auto;
+  h3 {
+    width: 75%;
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+  img {
+    width: 70%;
+  }
+}

@@ -59,6 +59,7 @@ a {
 button {
   font-size: $text;
   color: $whiteText;
+  @include rubik(400);
 }
 
 p {
@@ -66,4 +67,11 @@ p {
   letter-spacing: 0.25rem;
   font-size: $text;
   color: $bodyCopy;
+}
+
+input,
+textarea {
+  @include rubik(400);
+  font-size: $header3;
+  color: $darkBlue;
 }

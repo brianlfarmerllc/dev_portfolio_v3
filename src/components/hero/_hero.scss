@@ -1,7 +1,6 @@
 .hero {
   height: 90vh;
   background: $blueSolid;
-  // clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 .hero-container {
   @include flex(row, center, center);
@@ -61,44 +60,39 @@
 /* styles for the typing text */
 span {
   @include rubik(300);
-  font-size: $header4;
+  font-size: $header3;
 }
-.const {
-  color: rgb(0, 0, 199);
+.function {
+  color: $lightRed;
   padding-right: 0.5rem;
 }
 .constName {
   color: rgb(0, 119, 255);
 }
 
-.equals {
-  color: white;
-}
-.array {
-  color: yellow;
+.curly {
+  color: $lightRed;
   padding: 0rem 1rem;
+}
+
+.invoke {
+  h4 {
+    padding-top: 1rem;
+    @include rubik(300);
+    font-size: $header3;
+    color: rgb(0, 119, 255);
+  }
 }
 
 .typewriter {
   @include rubik(300);
-  color: rgb(255, 115, 0);
+  color: $navText;
   padding-bottom: 8rem;
   display: inline;
-  font-size: 2.1rem;
+  font-size: $header3;
   position: relative;
 }
-// curser for text
-h4::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  background: white;
-  width: 2px;
-  height: 2.6rem;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-  animation: blink 750ms infinite;
-}
+
 // helper classes to fade and remove element
 .fadeout {
   animation: fadeout 1.2s ease 1.8s forwards;

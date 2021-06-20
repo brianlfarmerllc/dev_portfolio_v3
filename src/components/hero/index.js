@@ -1,4 +1,4 @@
-function Hero({ navBar, text, hero }) {
+function Hero({ navBar, text, hero, invoke }) {
   return (
     <section id="hero" className="hero">
       <div className="hero-container">
@@ -18,11 +18,15 @@ function Hero({ navBar, text, hero }) {
           </div>
         </div>
         <div className={navBar}>
-          <span className="const">const</span>{" "}
-          <span className="constName"> navBar</span>{" "}
-          <span className="equals">=</span> <span className="array">[</span>
+          <span className="function">function</span>{" "}
+          <span className="constName"> createSite &#40; &#41; </span>{" "}
+          <span className="curly">&#123;</span>
           <h4 className="typewriter">{text}</h4>
-          <span className="array">]</span>
+          <span className="curly">&#125;</span>
+          <br />
+          <div className="invoke">
+            <h4>{invoke}</h4>
+          </div>
         </div>
       </div>
     </section>

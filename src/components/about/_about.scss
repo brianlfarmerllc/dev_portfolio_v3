@@ -1,8 +1,6 @@
 .about {
   min-height: 100vh;
   padding: 10rem 0rem;
-  // display: grid;
-  // place-items: center;
 }
 
 .about-header {
@@ -31,9 +29,14 @@
 
 .about-content {
   @include flex(row, space-between, flex-start);
+  padding: 5rem;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .about-text {
-  flex: 2 1 40rem;
+  flex: 1 1 40rem;
   p {
     padding: 0rem 4rem 2rem 0rem;
   }
@@ -60,7 +63,7 @@
 
 .about-img {
   flex: 1 1 40rem;
-  @include flex(row, flex-end, center);
+  @include flex(row, center, center);
   img {
     width: 65%;
     box-shadow: 30px 30px $lightRed;
