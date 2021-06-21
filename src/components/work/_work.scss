@@ -8,6 +8,9 @@
   max-width: 1440px;
   margin: auto;
 }
+.work-content {
+  opacity: 0;
+}
 .work-header {
   @include flex(row, flex-start, center);
   padding-bottom: 6rem;

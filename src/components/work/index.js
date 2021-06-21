@@ -1,14 +1,29 @@
+import { useRef } from "react";
+import { useIntersection } from "react-use";
 import fem from "../../assets/fem.png";
 import readme from "../../assets/readme.png";
 import bffk9 from "../../assets/bffk9.png";
 function Work() {
+  const sectionRef = useRef(null);
+
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  });
   return (
-    <section id="work" className="work">
+    <section ref={sectionRef} id="work" className="work">
       <div className="work-container">
         <header className="work-header">
           <h2>What I've Been Working On</h2>
         </header>
-        <div className="work-content">
+        <div
+          className={
+            intersection && intersection.intersectionRatio < 0.1
+              ? "work-content"
+              : "work-content show-element"
+          }
+        >
           {/* first featured */}
           <div className="featured">
             <div className=" featured-img featured-img-left">

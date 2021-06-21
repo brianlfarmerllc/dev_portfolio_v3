@@ -1,9 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useIntersection } from "react-use";
 import api from "../api";
 import ProjectCard from "../projectCard";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
+  const sectionRef = useRef(null);
+
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  });
 
   useEffect(() => {
     loadProjects();
@@ -18,12 +26,18 @@ function Projects() {
     });
   };
   return (
-    <section id="projects" className="projects">
+    <section ref={sectionRef} id="projects" className="projects">
       <div className="projects-container">
         <header className="projects-header">
           <h2>Other Noteworthy Projects</h2>
         </header>
-        <div className="projects-content">
+        <div
+          className={
+            intersection && intersection.intersectionRatio < 0.1
+              ? "projects-content"
+              : "projects-content show-element"
+          }
+        >
           {projects.map((project, index) => (
             <ProjectCard key={index} info={project} />
           ))}

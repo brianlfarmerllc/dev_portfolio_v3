@@ -1,12 +1,27 @@
+import { useRef } from "react";
+import { useIntersection } from "react-use";
 import brian from "../../assets/brian_base.jpeg";
 function About() {
+  const sectionRef = useRef(null);
+
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  });
   return (
-    <section id="about" className="about">
+    <section ref={sectionRef} id="about" className="about">
       <div className="about-container">
         <header className="about-header">
           <h2>About Me</h2>
         </header>
-        <div className="about-content">
+        <div
+          className={
+            intersection && intersection.intersectionRatio < 0.3
+              ? "about-content"
+              : "about-content show-element"
+          }
+        >
           <div className="about-text">
             <p>
               Hello! My name is Brian and I enjoy creating things that live on

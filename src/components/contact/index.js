@@ -1,13 +1,28 @@
+import { useRef } from "react";
+import { useIntersection } from "react-use";
 import mail from "../../assets/mail.svg";
 
 function Contact() {
+  const sectionRef = useRef(null);
+
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  });
   return (
-    <section id="contact" className="contact">
+    <section ref={sectionRef} id="contact" className="contact">
       <div className="contact-container">
         <header className="contact-header">
           <h2>Get In Touch</h2>
         </header>
-        <div className="contact-content">
+        <div
+          className={
+            intersection && intersection.intersectionRatio < 0.1
+              ? "contact-content"
+              : "contact-content show-element"
+          }
+        >
           <div className="form-container">
             <form action="">
               <input required placeholder="Full Name" type="text" />

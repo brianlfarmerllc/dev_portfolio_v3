@@ -156,6 +156,11 @@ textarea {
   color: #1f3f5b;
 }
 
+.show-element {
+  -webkit-animation: floatup 0.8s ease forwards, fadein 1s ease forwards;
+          animation: floatup 0.8s ease forwards, fadein 1s ease forwards;
+}
+
 .navHeader {
   width: 100%;
   background: #202041;
@@ -501,6 +506,7 @@ span {
   border-radius: 10px;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  opacity: 0;
 }
 
 .about-text {
@@ -583,6 +589,10 @@ span {
   width: 90%;
   max-width: 1440px;
   margin: auto;
+}
+
+.work-content {
+  opacity: 0;
 }
 
 .work-header {
@@ -866,6 +876,7 @@ span {
   -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
+  opacity: 0;
 }
 
 .card {
@@ -1007,6 +1018,7 @@ span {
   padding: 5rem 0rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  opacity: 0;
 }
 
 .form-container {
