@@ -195,7 +195,7 @@ function Work() {
                 <li>MERN</li>
                 <li>Moment</li>
                 <li>Async</li>
-                <li>React-Time-Picker</li>
+                <li>Time-Picker</li>
               </ul>
               <ul className="project-links">
                 <li>

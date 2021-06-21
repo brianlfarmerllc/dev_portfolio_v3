@@ -528,8 +528,8 @@ span {
 .about-text ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(125px, 300px))[2];
-      grid-template-columns: repeat(2, minmax(125px, 300px));
+  -ms-grid-columns: (minmax(225px, 300px))[2];
+      grid-template-columns: repeat(2, minmax(225px, 300px));
   padding: 0px;
 }
 
@@ -1159,6 +1159,71 @@ span {
     -webkit-box-shadow: 10px 10px #ff7a85;
             box-shadow: 10px 10px #ff7a85;
   }
+  .contact .contact-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact .contact-content .form-container {
+    padding: 4rem 0rem;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .featured {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+  }
+  .featured-content {
+    padding-top: 5rem;
+    text-align: start;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+  }
+  .featured-content .project-tech {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .featured-content .project-tech li {
+    padding: 0rem 2rem 0rem 0rem;
+  }
+  .featured-content .project-links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .featured-content .project-links li a {
+    padding: 0;
+  }
+  .featured-img {
+    grid-column: 1/-1;
+  }
+  .featured-img img {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -1207,6 +1272,10 @@ span {
   }
   .hero .hero-text h3::after {
     width: 100%;
+  }
+  .projects-content {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 /*# sourceMappingURL=index.css.map */

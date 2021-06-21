@@ -11,8 +11,8 @@
       }
     }
   }
-  // about section
 
+  // about section
   .about-text {
     p {
       padding-right: 0;
@@ -25,6 +25,48 @@
     padding: 10rem 0;
     img {
       box-shadow: 10px 10px $lightRed;
+    }
+  }
+  //   contact section
+  .contact {
+    .contact-content {
+      @include flex(column-reverse, center, center);
+      .form-container {
+        padding: 4rem 0rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 945px) {
+  // work section
+  .featured {
+    @include flex(column, center, space-between);
+  }
+  .featured-content {
+    padding-top: 5rem;
+    text-align: start;
+    grid-column: 2/12;
+    .project-tech {
+      justify-content: flex-start;
+      li {
+        padding: 0rem 2rem 0rem 0rem;
+      }
+    }
+    .project-links {
+      justify-content: flex-start;
+      li {
+        a {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .featured-img {
+    grid-column: 1/-1;
+    img {
+      opacity: 1;
     }
   }
 }
@@ -58,5 +100,9 @@
         }
       }
     }
+  }
+  //   other projects
+  .projects-content {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
