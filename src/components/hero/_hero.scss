@@ -1,10 +1,10 @@
 .hero {
-  height: 90vh;
+  height: 100vh;
   background: $blueSolid;
 }
 .hero-container {
   @include flex(row, center, center);
-  height: 85vh;
+  height: 100vh;
 }
 .hero-content {
   max-width: 1440px;

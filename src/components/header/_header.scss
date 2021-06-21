@@ -1,13 +1,17 @@
 .navHeader {
   width: 100%;
   background: $blueSolid;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
-  transition: all 0.3s ease;
-  .hide {
-    top: -100%;
-  }
+  transform: translateY(0);
+  transition: all 0.5s ease-in-out;
+}
+.shadow {
+  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
+}
+.hidden {
+  transform: translateY(-100%);
 }
 
 nav {

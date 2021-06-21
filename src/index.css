@@ -87,7 +87,6 @@
 
 html {
   font-size: 62.5%;
-  scroll-padding-top: 10vh;
   scroll-behavior: smooth;
 }
 
@@ -160,16 +159,23 @@ textarea {
 .navHeader {
   width: 100%;
   background: #202041;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.navHeader .hide {
-  top: -100%;
+.shadow {
+  -webkit-box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
+}
+
+.hidden {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 nav {
@@ -291,7 +297,7 @@ nav a:hover:after {
 }
 
 .hero {
-  height: 90vh;
+  height: 100vh;
   background: #202041;
 }
 
@@ -309,7 +315,7 @@ nav a:hover:after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 85vh;
+  height: 100vh;
 }
 
 .hero-content {
