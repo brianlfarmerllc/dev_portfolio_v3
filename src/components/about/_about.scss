@@ -38,7 +38,7 @@
   flex-wrap: wrap;
 }
 .about-text {
-  flex: 1 1 20rem;
+  flex: 1 1 60rem;
   p {
     padding: 0rem 4rem 2rem 0rem;
   }
@@ -64,11 +64,11 @@
 }
 
 .about-img {
-  flex: 1 1 35rem;
+  flex: 1 1 32rem;
   @include flex(row, center, center);
   img {
     width: 65%;
-    box-shadow: 30px 30px $lightRed;
+    box-shadow: 20px 20px $lightRed;
     transition: box-shadow 0.5s;
     position: relative;
     &:hover {

@@ -521,8 +521,8 @@ span {
 
 .about-text {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 20rem;
-          flex: 1 1 20rem;
+      -ms-flex: 1 1 60rem;
+          flex: 1 1 60rem;
 }
 
 .about-text p {
@@ -556,8 +556,8 @@ span {
 
 .about-img {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 35rem;
-          flex: 1 1 35rem;
+      -ms-flex: 1 1 32rem;
+          flex: 1 1 32rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,8 +575,8 @@ span {
 
 .about-img img {
   width: 65%;
-  -webkit-box-shadow: 30px 30px #ff7a85;
-          box-shadow: 30px 30px #ff7a85;
+  -webkit-box-shadow: 20px 20px #ff7a85;
+          box-shadow: 20px 20px #ff7a85;
   -webkit-transition: -webkit-box-shadow 0.5s;
   transition: -webkit-box-shadow 0.5s;
   transition: box-shadow 0.5s;
@@ -1033,8 +1033,8 @@ span {
 
 .form-container {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
+      -ms-flex: 1 1 45rem;
+          flex: 1 1 45rem;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -1167,6 +1167,16 @@ footer {
 
 .email p {
   color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-img {
+    padding: 10rem 0;
+  }
+  .about-img img {
+    -webkit-box-shadow: 10px 10px #ff7a85;
+            box-shadow: 10px 10px #ff7a85;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1322,9 +1332,17 @@ footer {
   .hero .hero-text h3::after {
     width: 100%;
   }
+  .about-content {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .projects-content {
     -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .contact-content {
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

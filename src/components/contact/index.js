@@ -24,16 +24,18 @@ function Contact() {
           }
         >
           <div className="form-container">
-            <form action="">
-              <input required placeholder="Full Name" type="text" />
-              <input required placeholder="Email" type="email" />
+            <form name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
+              <input required placeholder="Full Name" type="text" name="name" />
+              <input required placeholder="Email" type="email" name="email" />
               <textarea
                 placeholder="Message"
                 name="message"
                 cols="30"
                 rows="7"
+                name="message"
               ></textarea>
-              <button>Say Hi</button>
+              <button type="submit">Say Hi</button>
             </form>
           </div>
           <div className="contact-img">

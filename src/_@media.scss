@@ -1,3 +1,11 @@
+@media screen and (max-width: 1200px) {
+  .about-img {
+    padding: 10rem 0;
+    img {
+      box-shadow: 10px 10px $lightRed;
+    }
+  }
+}
 @media screen and (max-width: 1000px) {
   // global
   .about-header,
@@ -101,8 +109,19 @@
       }
     }
   }
-  //   other projects
+
+  // about section
+  .about-content {
+    box-shadow: none;
+  }
+
+  //  other projects
   .projects-content {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  // contact section
+  .contact-content {
+    box-shadow: none;
   }
 }
