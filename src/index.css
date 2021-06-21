@@ -325,6 +325,9 @@ nav a:hover:after {
 
 .hero-content {
   max-width: 1440px;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,7 +356,7 @@ nav a:hover:after {
 
 .hero-text h3 {
   color: #e8e8e8;
-  padding-bottom: 2.8rem;
+  padding-bottom: 3.75rem;
   font-weight: 300;
   position: relative;
 }
@@ -371,18 +374,19 @@ nav a:hover:after {
 }
 
 .hero-text h1 {
-  padding-bottom: 0.8rem;
+  padding-bottom: 1rem;
 }
 
 .hero-text p {
   color: #e8e8e8;
-  padding-top: 1.2rem;
-  padding-bottom: 7rem;
+  padding-top: 1.75rem;
+  padding-bottom: 5rem;
   max-width: 650px;
 }
 
-.hero-text a {
-  margin-top: 4rem;
+.hero-text button {
+  background: #202041;
+  font-size: 2.2rem;
   padding: 2rem 3rem;
   border: solid #ff7a85 5px;
   border-radius: 5px;
@@ -392,7 +396,7 @@ nav a:hover:after {
   transition: all 0.4s;
 }
 
-.hero-text a:hover {
+.hero-text button:hover {
   background: #ff7a85;
 }
 
@@ -507,12 +511,14 @@ span {
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   opacity: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .about-text {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
 }
 
 .about-text p {
@@ -522,8 +528,8 @@ span {
 .about-text ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(225px, 300px))[2];
-      grid-template-columns: repeat(2, minmax(225px, 300px));
+  -ms-grid-columns: (minmax(125px, 300px))[2];
+      grid-template-columns: repeat(2, minmax(125px, 300px));
   padding: 0px;
 }
 
@@ -546,8 +552,8 @@ span {
 
 .about-img {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+      -ms-flex: 1 1 35rem;
+          flex: 1 1 35rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1112,5 +1118,95 @@ span {
 
 .contact-img img {
   width: 70%;
+}
+
+@media screen and (max-width: 1000px) {
+  .about-header,
+  .work-header,
+  .projects-header,
+  .contact-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-header h2::after,
+  .work-header h2::after,
+  .projects-header h2::after,
+  .contact-header h2::after {
+    width: 100%;
+  }
+  .about-text p {
+    padding-right: 0;
+  }
+  .about-text ul {
+    -ms-grid-columns: (minmax(125px, 300px))[2];
+        grid-template-columns: repeat(2, minmax(125px, 300px));
+  }
+  .about-img {
+    padding: 10rem 0;
+  }
+  .about-img img {
+    -webkit-box-shadow: 10px 10px #ff7a85;
+            box-shadow: 10px 10px #ff7a85;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  html {
+    font-size: 50%;
+  }
+  .navHeader nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .navHeader nav a:hover:after {
+    width: 0%;
+  }
+  .hero .hero-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .hero .hero-text h3 {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .hero .hero-text h3::after {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

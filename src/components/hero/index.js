@@ -14,7 +14,7 @@ function Hero({ navBar, text, hero, invoke }) {
               creating exceptional digital experiences. Highly adaptable
               technically, with a focus on the front-end development.
             </p>
-            <a href="resume">Resume</a>
+            <button>Resume</button>
           </div>
         </div>
         <div className={navBar}>

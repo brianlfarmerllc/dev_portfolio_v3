@@ -8,6 +8,7 @@
 }
 .hero-content {
   max-width: 1440px;
+  min-height: max-content;
   width: 90%;
   @include flex(row, space-between, flex-start);
   opacity: 0;
@@ -19,7 +20,7 @@
   text-align: start;
   h3 {
     color: $navText;
-    padding-bottom: 2.8rem;
+    padding-bottom: 3.75rem;
     font-weight: 300;
     position: relative;
     &::after {
@@ -35,16 +36,17 @@
     }
   }
   h1 {
-    padding-bottom: 0.8rem;
+    padding-bottom: 1rem;
   }
   p {
     color: $navText;
-    padding-top: 1.2rem;
-    padding-bottom: 7rem;
+    padding-top: 1.75rem;
+    padding-bottom: 5rem;
     max-width: 650px;
   }
-  a {
-    margin-top: 4rem;
+  button {
+    background: $blueSolid;
+    font-size: $anchor;
     padding: 2rem 3rem;
     border: solid $lightRed 5px;
     border-radius: 5px;

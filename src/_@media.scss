@@ -1,0 +1,62 @@
+@media screen and (max-width: 1000px) {
+  // global
+  .about-header,
+  .work-header,
+  .projects-header,
+  .contact-header {
+    @include flex(row, center, center);
+    h2 {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  // about section
+
+  .about-text {
+    p {
+      padding-right: 0;
+    }
+    ul {
+      grid-template-columns: repeat(2, minmax(125px, 300px));
+    }
+  }
+  .about-img {
+    padding: 10rem 0;
+    img {
+      box-shadow: 10px 10px $lightRed;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  // global
+  html {
+    font-size: 50%;
+  }
+
+  //   header section
+  .navHeader {
+    nav {
+      @include flex(column, center, center);
+      text-align: center;
+    }
+    nav a:hover:after {
+      width: 0%;
+    }
+  }
+
+  // hero section
+  .hero {
+    .hero-text {
+      @include flex(column, center, center);
+      text-align: center;
+      h3 {
+        width: max-content;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
