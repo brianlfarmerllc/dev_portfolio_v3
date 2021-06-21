@@ -4,7 +4,12 @@
   position: sticky;
   top: 0;
   z-index: 3;
+  transition: all 0.3s ease;
+  .hide {
+    top: -100%;
+  }
 }
+
 nav {
   width: 90%;
   max-width: 1440px;

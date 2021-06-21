@@ -37,6 +37,7 @@ function App() {
     }, 130);
     return () => clearInterval(interval);
   });
+
   return (
     <main>
       <Header header={header} />

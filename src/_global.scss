@@ -72,6 +72,6 @@ p {
 input,
 textarea {
   @include rubik(400);
-  font-size: $header3;
+  font-size: $anchor;
   color: $darkBlue;
 }
