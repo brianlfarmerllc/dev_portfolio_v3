@@ -1,0 +1,32 @@
+footer {
+  width: 100%;
+  background: $blueSolid;
+  position: absolute;
+  top: 100%;
+}
+.footerNav {
+  opacity: 1;
+  @include flex(column, center, center);
+  ul {
+    li {
+      display: grid;
+      place-items: center;
+      width: 100%;
+    }
+    a {
+      margin: 0rem 2rem;
+      padding: 0.5rem 1rem;
+      width: 100%;
+    }
+  }
+}
+
+.footerNav a:hover:after {
+  width: 0%;
+}
+
+.email {
+  p {
+    color: white;
+  }
+}

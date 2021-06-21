@@ -95,6 +95,10 @@ body {
   font-weight: 300;
 }
 
+main {
+  position: relative;
+}
+
 h1 {
   font-size: 5.6rem;
   color: #f7f7f7;
@@ -1118,6 +1122,51 @@ span {
 
 .contact-img img {
   width: 70%;
+}
+
+footer {
+  width: 100%;
+  background: #202041;
+  position: absolute;
+  top: 100%;
+}
+
+.footerNav {
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footerNav ul li {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.footerNav ul a {
+  margin: 0rem 2rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.footerNav a:hover:after {
+  width: 0%;
+}
+
+.email p {
+  color: white;
 }
 
 @media screen and (max-width: 1000px) {

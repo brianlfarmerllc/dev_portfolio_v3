@@ -5,6 +5,7 @@ import About from "./components/about";
 import Work from "./components/work";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 function App() {
   const [header, setHeader] = useState("hide");
@@ -46,6 +47,7 @@ function App() {
       <Work />
       <Projects />
       <Contact />
+      <Footer />
     </main>
   );
 }

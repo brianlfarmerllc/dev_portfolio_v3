@@ -13,6 +13,9 @@ html {
 body {
   @include rubik(300);
 }
+main {
+  position: relative;
+}
 
 // Global Typography Styles
 
