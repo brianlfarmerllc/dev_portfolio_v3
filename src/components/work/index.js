@@ -45,7 +45,7 @@ function Work() {
               <div className="project-description">
                 {/* first featured description */}
                 <p>
-                  A fun resource for developers to chalange themselves while
+                A fun resource for developers to challenge themselves while
                   learning new skills by creating front end projects off a
                   provided design.
                 </p>

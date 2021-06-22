@@ -30,10 +30,11 @@ function About() {
               website builder "Wix".
             </p>
             <p>
-              I am a naturaly curious person and a habitual hobbiest so I set
-              myself on a mision to discover what was really going on behind the
+            I am a naturally curious person and a habitual hobbyist so I set
+              myself on a mission to discover what was really going on behind the
               scenes. I found a world way beyond the drag and drop website
               builder and discovered a career path I could be excited about.
+
             </p>
             <p>Here are a few technologies I've been working with recently:</p>
             <ul>
