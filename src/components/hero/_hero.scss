@@ -44,7 +44,10 @@
     padding-bottom: 5rem;
     max-width: 650px;
   }
-  button {
+
+  a {
+    display: block;
+    max-width: max-content;
     background: $blueSolid;
     font-size: $anchor;
     padding: 2rem 3rem;

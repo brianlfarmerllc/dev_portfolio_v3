@@ -1,3 +1,5 @@
+import resume from "../../assets/Resume.pdf";
+
 function Hero({ navBar, text, hero, invoke }) {
   return (
     <section id="hero" className="hero">
@@ -14,7 +16,10 @@ function Hero({ navBar, text, hero, invoke }) {
               creating exceptional digital experiences. Highly adaptable
               technically, with a focus on the front-end development.
             </p>
-            <button>Resume</button>
+            {/* <button>Resume</button> */}
+            <a href={resume} target="blank">
+              Resume
+            </a>
           </div>
         </div>
         <div className={navBar}>
