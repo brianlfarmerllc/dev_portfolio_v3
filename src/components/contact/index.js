@@ -33,7 +33,6 @@ function Contact() {
                 name="message"
                 cols="30"
                 rows="7"
-                name="message"
               ></textarea>
               <button type="submit">Say Hi</button>
             </form>

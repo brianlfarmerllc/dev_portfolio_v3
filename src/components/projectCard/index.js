@@ -11,7 +11,7 @@ function ProjectCard({ info }) {
     api.getTopics(info.owner.login, info.name).then((res) => {
       setTech(res);
     });
-  }, [tech]);
+  }, [tech,info.owner.login, info.name]);
 
   return (
     <div className="card">

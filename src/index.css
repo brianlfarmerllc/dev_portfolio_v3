@@ -899,6 +899,13 @@ span {
   border-radius: 5px;
   padding: 2rem;
   position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
 }
 
 .card-links {
