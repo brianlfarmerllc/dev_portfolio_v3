@@ -1319,7 +1319,10 @@ footer {
   .navHeader nav a:hover:after {
     width: 0%;
   }
-  .hero .hero-text {
+  .hero .hero-container {
+    padding-top: 15rem;
+  }
+  .hero .hero-container .hero-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1335,12 +1338,15 @@ footer {
             align-items: center;
     text-align: center;
   }
-  .hero .hero-text h3 {
+  .hero .hero-container .hero-text h1 {
+    font-size: 4rem;
+  }
+  .hero .hero-container .hero-text h3 {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
-  .hero .hero-text h3::after {
+  .hero .hero-container .hero-text h3::after {
     width: 100%;
   }
   .about-content {
